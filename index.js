@@ -5,7 +5,7 @@ var controller = Botkit.slackbot();
 
 // give the bot something to listen for.
 controller.hears([/.*/], ['direct_message','direct_mention','mention'], function(bot,message) {
-  let normalizedMessage = message.text.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, "")
+  let normalizedMessage = message.text.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, "") //normalizes text for case-insensitivity and punctuation
   console.log(normalizedMessage)
   if (normalizedMessage === 'hello') {
     bot.reply(message,'Hello yourself.');
