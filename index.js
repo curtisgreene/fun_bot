@@ -10,7 +10,7 @@ controller.hears([/.*/], ['direct_message','direct_mention','mention'], function
   if (normalizedMessage === 'hello') {
     bot.reply(message,'Hello Lydia.');
   }
-  else if (normalizedMessage === 'what time is it') {
+  else if (normalizedMessage.includes('time')) {
     bot.reply(message, `It is ${new Date()}`)
   }
   else if (normalizedMessage === 'what do you do') {
