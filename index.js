@@ -8,7 +8,7 @@ controller.hears([/.*/], ['direct_message','direct_mention','mention'], function
   let normalizedMessage = message.text.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, "") //normalizes text for case-insensitivity and punctuation
   console.log(normalizedMessage)
   if (normalizedMessage === 'hello') {
-    bot.reply(message,'Hello Lydia.');
+    bot.reply(message,'Hello yourself.');
   }
   else if (normalizedMessage.includes('time')) {
     bot.reply(message, `It is ${new Date()}`)
